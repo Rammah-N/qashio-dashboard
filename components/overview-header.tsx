@@ -3,7 +3,7 @@ import { Progress } from "@/components/ui/progress";
 
 const OverviewHeader = () => {
 	return (
-		<div className="bg-[#FAFAFA] pb-5 px-5">
+		<div className="bg-[#FAFAFA] px-5 pt-5">
 			<h1 className="text-3xl font-semibold">Overview</h1>
 			<div className="flex items-center justify-between my-5">
 				<div>
