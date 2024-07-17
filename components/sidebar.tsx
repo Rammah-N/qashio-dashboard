@@ -28,12 +28,12 @@ const Sidebar = () => {
 			<NavItem
 				currentPath={currentPath}
 				text="Insights"
-				href="/insights"
-				icon={<LayoutDashboard size={25} />}
+				href="/"
+				icon={LayoutDashboard}
 			/>
 			<NavItem
 				href="/transactions"
-				icon={<CircleDollarSign size={25} />}
+				icon={CircleDollarSign}
 				currentPath={currentPath}
 				text="Transactions"
 				subPaths={[
@@ -59,43 +59,38 @@ const Sidebar = () => {
 				currentPath={currentPath}
 				text="Card"
 				href="/card"
-				icon={<CreditCard size={25} />}
+				icon={CreditCard}
 			/>
 			<NavItem
 				currentPath={currentPath}
 				text="Vendors"
 				href="/vendors"
-				icon={<Store size={25} />}
+				icon={Store}
 			/>
 			<NavItem
 				currentPath={currentPath}
 				text="Accounting"
 				href="/accounting"
-				icon={<BookOpenText size={25} />}
+				icon={BookOpenText}
 			/>
 			<NavItem
 				currentPath={currentPath}
 				text="People"
 				href="/people"
-				icon={<Users size={25} />}
+				icon={Users}
 			/>
 			<NavItem
 				currentPath={currentPath}
 				text="Reimburse"
 				href="/reimburse"
-				icon={<Receipt size={25} />}
+				icon={Receipt}
 			/>
 			<NavItem
 				currentPath={currentPath}
 				text="Settings"
 				href="/settings"
 				className="mt-auto"
-				icon={
-					<Settings
-						size={25}
-						className={getActiveColor(currentPath, "/settings")}
-					/>
-				}
+				icon={Settings}
 			/>
 		</aside>
 	);

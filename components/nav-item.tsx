@@ -7,6 +7,7 @@ import {
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
+import { LucideIcon } from "lucide-react";
 
 const NavItem = ({
 	text,
@@ -17,21 +18,25 @@ const NavItem = ({
 	currentPath,
 }: {
 	text: string;
-	icon?: React.ReactNode;
+	icon?: LucideIcon;
 	href: string;
 	subPaths?: { text: string; href: string }[];
 	className?: string;
 	currentPath: string;
 }) => {
-	const activeCN = currentPath.includes(href)
-		? "text-qash-black font-bold"
-		: "text-qash-gray";
+	const Icon = icon;
+	const activeCN =
+		!subPaths && currentPath === href
+			? "text-qash-black font-bold"
+			: subPaths && subPaths.some((subPath) => currentPath === subPath.href)
+			? "text-qash-black font-bold"
+			: "text-qash-gray";
 	if (subPaths && subPaths.length) {
 		return (
 			<Collapsible className={cn(`w-full transition-all ${activeCN}`)}>
 				<CollapsibleTrigger
 					className={cn(activeCN, "flex gap-5 items-center text-lg")}>
-					{icon}
+					{Icon && <Icon size={25} />}
 					{text}
 				</CollapsibleTrigger>
 				<CollapsibleContent className="pl-10 pt-2 fade-in-10">
@@ -55,7 +60,7 @@ const NavItem = ({
 		<Link
 			href={href}
 			className={`w-full text-lg flex items-center gap-5 ${activeCN} ${className}`}>
-			{icon}
+			{Icon && <Icon size={25} />}
 			{text}
 		</Link>
 	);

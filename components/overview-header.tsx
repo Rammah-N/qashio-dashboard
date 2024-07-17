@@ -20,8 +20,8 @@ const OverviewHeader = () => {
 				</div>
 			</div>
 			<Progress value={45} style={{ height: 10 }} />
-			<div className="flex items-center gap-[30%] my-5">
-				<div>
+			<div className="flex items-center gap-[100px] my-5">
+				<div className="w-[300px]">
 					<span className="block text-slate-500 text-xs font-semibold">
 						Next Payment
 					</span>

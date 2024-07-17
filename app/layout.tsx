@@ -17,12 +17,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`flex gap-5 h-screen max-h-screen overflow-hidden p-5 ${openSans.className}`}>
-				<Sidebar />
-				<main className="flex-1 py-5 h-full shadow rounded-3xl">
-					{children}
-				</main>
+			<body className={`min-w-full ${openSans.className}`}>
+				<div className="flex gap-5 h-screen max-h-screen min-w-full overflow-hidden p-5">
+					<Sidebar />
+					<main className="flex-1 py-5 h-full shadow rounded-3xl">
+						{children}
+					</main>
+				</div>
 			</body>
 		</html>
 	);
