@@ -20,7 +20,7 @@ export default function RootLayout({
 			<body
 				className={`flex gap-5 h-screen max-h-screen overflow-hidden p-5 ${openSans.className}`}>
 				<Sidebar />
-				<main className="bg-[#FAFAFA] flex-1 p-5 h-full shadow rounded-3xl">
+				<main className="flex-1 py-5 h-full shadow rounded-3xl">
 					{children}
 				</main>
 			</body>

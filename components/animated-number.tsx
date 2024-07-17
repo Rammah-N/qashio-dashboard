@@ -20,8 +20,9 @@ const AnimatedNumber = ({
 
 	React.useEffect(() => {
 		const animation = animate(count, value, {
-			duration: 2.5,
-			ease: "easeOut",
+			duration: 1.5,
+			ease: "easeInOut",
+			delay: 0,
 		});
 		return animation.stop;
 	}, [value]);
