@@ -28,13 +28,13 @@ const NavItem = ({
 		: "text-qash-gray";
 	if (subPaths && subPaths.length) {
 		return (
-			<Collapsible className={cn(`w-full ${activeCN}`)}>
+			<Collapsible className={cn(`w-full transition-all ${activeCN}`)}>
 				<CollapsibleTrigger
 					className={cn(activeCN, "flex gap-5 items-center text-lg")}>
 					{icon}
 					{text}
 				</CollapsibleTrigger>
-				<CollapsibleContent className="pl-10 pt-2">
+				<CollapsibleContent className="pl-10 pt-2 fade-in-10">
 					{subPaths.map((subPath) => (
 						<Link
 							href={subPath.href}
