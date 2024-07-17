@@ -43,11 +43,11 @@ const Sidebar = () => {
 					},
 					{
 						text: "Needs Review",
-						href: "/transactions/needs-review",
+						href: "/transactions/review",
 					},
 					{
 						text: "Out of Policy",
-						href: "/transactions/out-of-policy",
+						href: "/transactions/policy",
 					},
 					{
 						text: "Declined",
