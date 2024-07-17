@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/sidebar";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={openSans.className}>{children}</body>
+			<body
+				className={`flex gap-5 h-screen max-h-screen overflow-hidden p-5 ${openSans.className}`}>
+				<Sidebar />
+				<main className="bg-[#FAFAFA] flex-1 p-5 h-full shadow rounded-3xl">
+					{children}
+				</main>
+			</body>
 		</html>
 	);
 }
