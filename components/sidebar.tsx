@@ -17,9 +17,6 @@ import Link from "next/link";
 
 const Sidebar = () => {
 	const currentPath = usePathname();
-	const getActiveColor = (path: string, href: string) =>
-		path.includes(href) ? "text-qash-black" : "text-qash-gray";
-	console.log(currentPath);
 	return (
 		<aside className="w-64 h-full rounded-3xl flex flex-col items-center p-10 gap-5 shadow bg-[#F6F6F4]">
 			<Link href="https://qashio.com" className="mb-5">

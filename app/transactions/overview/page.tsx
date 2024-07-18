@@ -1,18 +1,8 @@
-import CurrencyChanger from "@/components/currency-changer";
-import TransactionsTable from "@/components/data-table";
+import TransactionsTable from "@/components/tables/transactions/table";
 import InfoCard from "@/components/info-card";
 import OverviewHeader from "@/components/overview-header";
-import { Button } from "@/components/ui/button";
-import DatePicker from "@/components/ui/date-picker";
-import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-	ArrowUpRight,
-	CircleDollarSign,
-	Download,
-	Save,
-	Search,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 const Overview = () => {
