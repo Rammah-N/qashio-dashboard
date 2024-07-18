@@ -2,8 +2,8 @@ import TransactionsTable from "@/components/tables/transactions/table";
 import InfoCard from "@/components/info-card";
 import OverviewHeader from "@/components/overview-header";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ArrowUpRight } from "lucide-react";
-import React from "react";
+import { ArrowUpRight, Loader } from "lucide-react";
+import React, { Suspense } from "react";
 
 const Overview = () => {
 	return (
@@ -19,7 +19,14 @@ const Overview = () => {
 						icon={ArrowUpRight}
 					/>
 				</section>
-				<TransactionsTable />
+				<Suspense
+					fallback={
+						<div className="flex w-full h-full">
+							<Loader size={30} className="infinite animate-spin" />
+						</div>
+					}>
+					<TransactionsTable />
+				</Suspense>
 			</main>
 		</ScrollArea>
 	);
