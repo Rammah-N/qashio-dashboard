@@ -29,5 +29,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the live project.
+or you can visit [https://qashio.vercel.app/](https://qashio.vercel.app) to see the deployed project.
 
-The project is optimized and better experienced on a PC, but it is still built responsive to an extent.
+The project is optimized and better experienced on a PC, and was not optimized to be responsive.
